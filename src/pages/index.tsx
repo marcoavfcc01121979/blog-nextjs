@@ -5,7 +5,6 @@ import { getPrismicClient } from '../services/prismic';
 import commonStyles from '../styles/common.module.scss';
 
 import styles from './home.module.scss';
-import logo from '../assets/Vector.svg';
 
 interface Post {
   uid?: string;
@@ -33,17 +32,23 @@ interface HomeProps {
      <div className={styles.container}>
 
        <div className={styles.header}>
-         <img src={logo} alt="Logo do blog" />
+         <img src="/images/Vector.svg" alt="Logo do blog" />
          <span>spacetraveling</span>
        </div>
 
        <div className={styles.preview}>
          <h1>Como ultilizar hooks</h1>
          <p>Pensando em sicronização em fez de ciclos de vida.</p>
-         <div>
-            <time>15 Mar 2021</time>
-            <span>icone</span>
-            <p>Joseph Oliveira</p>
+         <div className={styles.rodape}>
+            <div className={styles.tempo}>
+              <img src="/images/Vector-1.svg" alt="relogio do tempo"/>
+              <time>15 Mar 2021</time>
+            </div>
+
+            <div className={styles.usuario}>
+              <img src="/images/Vector-2.svg" alt="usuario"/>
+              <span>Joseph Oliveira</span>
+            </div>
          </div>
 
 
